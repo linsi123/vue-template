@@ -1,0 +1,10 @@
+{
+    "status": {
+      "code": "SUCCESS",
+      "msg": ""
+    },
+    "result" : {
+        "number": 123
+    }
+  }
+  
