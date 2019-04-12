@@ -7,7 +7,8 @@ module.exports = {
   // },
   parserOptions: {
     // 'parser': 'babel-eslint',
-    parser: 'typescript-eslint-parser',
+    // parser: 'typescript-eslint-parser',
+    parser: '@typescript-eslint/parser',
     ecmaFeatures : {
       jsx: true,
       useJSXTextNode: true,
@@ -55,7 +56,7 @@ module.exports = {
     // 去掉分号结尾
     'semi': [2, 'never'],
     // 类和接口的命名必须遵守帕斯卡命名法，比如 PersianCat
-    'typescript/class-name-casing': 'error',
+    // 'typescript/class-name-casing': 'error',
     // 禁止使用 ++ 或 -- 没必要限制
     'no-plusplus': 'off',
     // 禁止对函数的参数重新赋值
