@@ -39,14 +39,14 @@ module.exports = {
     }
   },
   configureWebpack: config => {
-    if (process.env.NODE_ENV === 'production') {
-      // 为生产环境修改配置...
-      if(process.env.npm_lifecycle_event === 'analyze'){
-        config.plugins.push(
-          new BundleAnalyzerPlugin()
-        );
-      }
-    }
+    // if (process.env.NODE_ENV === 'production') {
+    //   // 为生产环境修改配置...
+    //   if(process.env.npm_lifecycle_event === 'analyze'){
+    //     config.plugins.push(
+    //       new BundleAnalyzerPlugin()
+    //     );
+    //   }
+    // }
     // 为开发环境修改配置...
     return {
       plugins: [new WebpackNotifierPlugin()],

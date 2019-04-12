@@ -7684,7 +7684,7 @@ webpack-log@^2.0.0:
     ansi-colors "^3.0.0"
     uuid "^3.3.2"
 
-webpack-merge@^4.1.4:
+webpack-merge@^4.1.4, webpack-merge@^4.1.5:
   version "4.1.5"
   resolved "https://registry.npmjs.org/webpack-merge/-/webpack-merge-4.1.5.tgz#2be31e846c20767d1bef56bdca64c328a681190a"
   dependencies:
