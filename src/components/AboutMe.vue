@@ -12,7 +12,7 @@
 import Vue from 'vue'
 import Component, { mixins } from 'vue-class-component'
 import TestMixins from '@/mixins/test-mixins'
-import { NoCache } from '@/common/scripts/decorators'
+import { NoCache } from '@/common/decorators'
 import api from '@/services/todo'
 @Component({
   props: {
