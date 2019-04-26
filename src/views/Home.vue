@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="@/assets/logo.png" />
+    <img alt="Vue logo" src="@/assets/img/logo.png" />
     <!-- decorator例子 -->
 
     <HelloWorld
@@ -55,5 +55,5 @@ export default class Home extends Vue {
 }
 </script>
 <style lang="less">
-@import '../common/styles/index.less';
+@import '../assets/styles/index.less';
 </style>

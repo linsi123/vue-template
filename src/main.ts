@@ -1,4 +1,4 @@
-import '@/common/scripts/class-component-hooks'
+import '@/common/class-component-hooks'
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router/index'
