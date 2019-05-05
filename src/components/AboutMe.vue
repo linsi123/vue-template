@@ -13,7 +13,7 @@ import Vue from 'vue'
 import Component, { mixins } from 'vue-class-component'
 import TestMixins from '@/mixins/test-mixins'
 import { NoCache } from '@/common/decorators'
-import api from '@/services/todo'
+import { getTodo, postTodo } from '@/services/todo'
 @Component({
   props: {
     propMessage: String
@@ -35,7 +35,7 @@ export default class Test extends mixins(TestMixins) {
 
   // lifecycle hook
   async mounted() {
-    const res = await api.getTodo({})
+    const res = await getTodo({})
     this.msg = res.result.number
   }
 
@@ -51,7 +51,7 @@ export default class Test extends mixins(TestMixins) {
   }
 
   async increase() {
-    const res = await api.postTodo({})
+    const res = await postTodo({})
     this.msg = res.result.number
   }
 }

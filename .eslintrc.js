@@ -72,6 +72,7 @@ module.exports = {
     ],
     //在类的非静态方法中，必须存在对 this 的引用
     'class-methods-use-this': 'off',
-    'no-extra-parens': 'off'
+    'no-extra-parens': 'off',
+    'no-shadow': ['error', { 'allow': ['state'] }]
   }
 };

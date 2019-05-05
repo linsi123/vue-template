@@ -4,7 +4,8 @@
       "msg": ""
     },
     "result" : {
-        "number": 123
+        "uid": 123,
+        "name": "tony",
+        "age": 23
     }
 }
-  

@@ -1,7 +1,7 @@
 const path = require('path')
 const WebpackNotifierPlugin = require('webpack-notifier')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-// const mockService = require('utweb-mock-middleware')
+const mockService = require('utweb-mock-middleware')
 
 function resolve(src) {
   return path.join(__dirname, './', src)
@@ -35,7 +35,7 @@ module.exports = {
     before: app => {
       const BASE_MOCK_PATH = '/mock/';
       const ROUTER_PATH = '/mock/router.js';
-      // app.use(mockService({ mockRoot: BASE_MOCK_PATH, routes: ROUTER_PATH}))
+      app.use(mockService({ mockRoot: BASE_MOCK_PATH, routes: ROUTER_PATH}))
     }
   },
   configureWebpack: config => {

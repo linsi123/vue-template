@@ -1,5 +1,6 @@
 import Axios from 'axios'
 import { REQ_STATUS_CODE, BASE_PATH } from '@/constants/services'
+import { ResponseData } from '@/constants/http'
 
 export const instance = Axios.create({
   baseURL: BASE_PATH,
@@ -18,10 +19,14 @@ const defaultPostOption = {
   headers
 }
 
-export const get = (url, params, option = {}) =>
+export const get = <Data extends ResponseData>(
+  url: string,
+  params: any,
+  option: any = {}
+) =>
   instance
-    .get(`${url}`, { params, ...defaultGetOption, ...option })
-    .then(res => {
+    .get<Data>(`${url}`, { params, ...defaultGetOption, ...option })
+    .then<Data>(res => {
       const { status } = res.data
       return status.code !== REQ_STATUS_CODE.SUCCESS
         ? Promise.reject(status)
@@ -38,5 +43,9 @@ export const post = (url, data, option = {}) =>
         : res.data
     })
 
-export const getByUrl = url => (params, ...args) => get(url, params, ...args)
+export const getByUrl = <Data extends ResponseData>(url: string) => (
+  params,
+  ...args
+) => get<Data>(url, params, ...args)
+
 export const postByUrl = url => (data, ...args) => post(url, data, ...args)

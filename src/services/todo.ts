@@ -1,8 +1,8 @@
 import { getByUrl, postByUrl } from '@/services/index'
 
-const getTodo = getByUrl('todo/list')
+export const getTodo = getByUrl('todo/list')
 
-const postTodo = postByUrl('todo/edit')
+export const postTodo = postByUrl('todo/edit')
 
 export default {
   getTodo,
